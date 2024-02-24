@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Resizable } from "re-resizable";
 import "./App.css";
 import axios from "axios";
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = "https://resizable-server.onrender.com";
 
 function App() {
 
