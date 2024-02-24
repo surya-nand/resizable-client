@@ -67,6 +67,14 @@
 
 }
 
+.loading-alert{
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: 500;
+}
 
 .sample1 {
   margin-right: 1%;

@@ -84,7 +84,7 @@ function App() {
   }, []);
 
   if (loading) {
-    return <p>Loading resizable blocks...</p>;
+    return <p className="loading-alert">Loading resizable blocks...</p>;
   }
 
 
