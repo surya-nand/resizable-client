@@ -11,6 +11,7 @@ function App() {
   const [isAddSample1Open, setIsAddSample1Open] = useState(false);
   const [isAddSample2Open, setIsAddSample2Open] = useState(false);
   const [newSampleValue, setNewSampleValue] = useState("");
+  const [loading, setLoading] = useState(true);
 
   //Add button to handle new data 
   const handleAddButton = (index) => {
@@ -75,10 +76,17 @@ function App() {
       } catch (error) {
         console.error("Error fetching data:", error);
         window.alert("Failed in fetching components data");
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
   }, []);
+
+  if (loading) {
+    return <p>Loading resizable blocks...</p>;
+  }
+
 
   return (
     <div className="resizable-app">
